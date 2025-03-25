@@ -1,0 +1,36 @@
+.popular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto; /* Let the content determine the height */
+    padding-bottom: 40px;
+}
+
+.popular h1{
+    
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+.popular hr{
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.popular-item{
+    margin-top: 20px; /* Reduce excessive spacing */
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Ensures products don't overflow */
+    justify-content: center; /* Centers items in the section */
+}
+.popular-item img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+  

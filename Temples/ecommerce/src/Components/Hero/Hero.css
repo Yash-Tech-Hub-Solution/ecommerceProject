@@ -1,0 +1,181 @@
+/* HERO SECTION */
+.hero {
+    height: 80vh; /* Adjusted height */
+    background: linear-gradient(0deg, pink, #fffefe); /* Vibrant Pink-Red Gradient */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    overflow: hidden; /* Prevents extra spacing */
+    
+}
+
+/* LEFT SIDE */
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 50px; /* Reduced padding */
+    line-height: 1.1;
+    
+}
+
+.hero-left h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-left p {
+    color: white;
+    font-size: 60px; /* Adjusted font size */
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* HAND ICON */
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-hand-icon img {
+    width: 70px; 
+}
+
+/* LATEST COLLECTION BUTTON */
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 260px;
+    height: 55px;
+    border-radius: 50px;
+    margin-top: 10px;
+    background: white;
+    color: #0077b6;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-latest-btn:hover {
+    color: #ff4d6d;
+    transform: scale(1.05);
+}
+
+/* Adjust arrow icon size */
+.hero-latest-btn img {
+    width: 22px;
+    height: auto;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%; /* Ensure it aligns properly */
+    overflow: hidden; /* Prevents images from spilling out */
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Front Image */
+.hero-right .front-image {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* BACKGROUND IMAGES */
+.hero-right .back-image {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    opacity: 0.6;
+    filter: blur(5px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* POSITIONING BACKGROUND IMAGES */
+.hero-right .back-left {
+    top: 10%;
+    left: -80px;
+    transform: scale(0.9);
+}
+
+.hero-right .back-right {
+    top: 10%;
+    right: -80px;
+    transform: scale(0.9);
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 1024px) {
+    .hero-right .back-left {
+        left: -50px;
+        transform: scale(0.8);
+    }
+
+    .hero-right .back-right {
+        right: -50px;
+        transform: scale(0.8);
+    }
+
+    .hero-right .front-image {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-right {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .hero-right .front-image {
+        width: 220px;
+    }
+
+    .hero-right .back-image {
+        width: 160px;
+        opacity: 0.4;
+    }
+
+    .hero-right .back-left {
+        top: 5%;
+        left: -30px;
+    }
+
+    .hero-right .back-right {
+        top: 5%;
+        right: -30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-right .front-image {
+        width: 180px;
+    }
+
+    .hero-right .back-image {
+        width: 140px;
+        opacity: 0.3;
+    }
+}
